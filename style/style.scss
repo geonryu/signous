@@ -1,0 +1,203 @@
+
+$theme-colors: (
+    "primary" : #ff4600,
+    "secondary" : #F6FDEC,
+    "point":    #6900FF,
+    "bg" : #002c3d,
+    "bg100" : #FFFAE0,
+    "bg200" : #ffece5,
+    "bg300" : #ffdacc,
+    "bg400" : #ffc7b2,
+    "bg500" : #ffb599,
+    "bg600" : #ffa27f,
+    "info" : #33b5e5,
+    "success" : #00c851,
+    "warning" : #ff8800,
+    "danger" : #ff4455,
+    "primary-black" : #2b2424,
+    "primary-white" : #ffffff,
+    "blue-light" : #eff4fe,
+    "blue-dark" : #072a60,
+    "gray-100": #f8f9fa,
+    "gray-200": #e9ecef,
+    "gray-300": #dee2e6,
+    "gray-400": #ced4da,
+    "gray-500": #adb5bd,
+    "gray-600": #6c757d,
+    "gray-700": #495057,
+    "gray-800": #343a40,
+    "gray-900": #212529
+    );
+    
+$font-sizes : (
+    1: calc(1.375rem + 1.5vw),
+    2: calc(1.325rem + 0.9vw),
+    3: calc(1.3rem + 0.6vw),
+    4: calc(1.275rem + 0.3vw),
+    5: 1.25rem,
+    6: .85rem, 
+);
+
+*, :after, :before, ::after, ::before {box-sizing:border-box}
+* {margin:0; padding: 0; background-repeat: no-repeat; background-size: cover; background-position: center center;}
+body, html {height:100%; font-family: 'Pretendard'; font-weight: 400;}
+body {-webkit-font-smoothing:antialiased; line-height:1.5}
+canvas, img, picture, svg, video {display:block;max-width:100%}
+button, input, select, textarea {font:inherit; border: 0; background-color: transparent;}
+button{cursor: pointer;}
+h1, h2, h3, h4, h5, h6, p {overflow-wrap:break-word}
+#__next, #root {isolation:isolate}
+ul,ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+img{vertical-align: top; width: 100%;}
+
+.navbar-toggler:focus {
+    outline: none !important;
+}
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12,
+.col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12,
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12,
+.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12,
+.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12,
+.col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12{flex: 0 1 auto !important;}
+
+.d-grid{display: grid; grid-template-columns: repeat(1, 1fr);}.d-grid-1{display: grid; grid-template-columns: repeat(1, 1fr);}.d-grid-2{display: grid; grid-template-columns: repeat(2, 1fr);}.d-grid-3{display: grid; grid-template-columns: repeat(3, 1fr);}.d-grid-4{display: grid; grid-template-columns: repeat(4, 1fr);}.d-grid-5{display: grid; grid-template-columns: repeat(5, 1fr);}.d-grid-6{display: grid; grid-template-columns: repeat(6, 1fr);}.d-grid-7{display: grid; grid-template-columns: repeat(7, 1fr);}.d-grid-8{display: grid; grid-template-columns: repeat(8, 1fr);}.d-grid-9{display: grid; grid-template-columns: repeat(9, 1fr);}.d-grid-10{display: grid; grid-template-columns: repeat(10, 1fr);}.d-grid-11{display: grid; grid-template-columns: repeat(11, 1fr);}.d-grid-12{display: grid; grid-template-columns: repeat(12, 1fr);}
+.d-grid-xs-1{display: grid; grid-template-columns: repeat(1, 1fr);}.d-grid-xs-2{display: grid; grid-template-columns: repeat(2, 1fr);} .d-grid-xs-3{display: grid; grid-template-columns: repeat(3, 1fr);} .d-grid-xs-4{display: grid; grid-template-columns: repeat(4, 1fr);} .d-grid-xs-5{display: grid; grid-template-columns: repeat(5, 1fr);} .d-grid-xs-6{display: grid; grid-template-columns: repeat(6, 1fr);} .d-grid-xs-7{display: grid; grid-template-columns: repeat(7, 1fr);} .d-grid-xs-8{display: grid; grid-template-columns: repeat(8, 1fr);} .d-grid-xs-9{display: grid; grid-template-columns: repeat(9, 1fr);} .d-grid-xs-10{display: grid; grid-template-columns: repeat(10, 1fr);} .d-grid-xs-11{display: grid; grid-template-columns: repeat(11, 1fr);} .d-grid-xs-12{display: grid; grid-template-columns: repeat(12, 1fr);}
+@media (min-width: 576px) { 
+    .d-grid-sm-1{display: grid; grid-template-columns: repeat(1, 1fr);}.d-grid-sm-2{display: grid; grid-template-columns: repeat(2, 1fr);}.d-grid-sm-3{display: grid; grid-template-columns: repeat(3, 1fr);}.d-grid-sm-4{display: grid; grid-template-columns: repeat(4, 1fr);}.d-grid-sm-5{display: grid; grid-template-columns: repeat(5, 1fr);}.d-grid-sm-6{display: grid; grid-template-columns: repeat(6, 1fr);}.d-grid-sm-7{display: grid; grid-template-columns: repeat(7, 1fr);}.d-grid-sm-8{display: grid; grid-template-columns: repeat(8, 1fr);}.d-grid-sm-9{display: grid; grid-template-columns: repeat(9, 1fr);}.d-grid-sm-10{display: grid; grid-template-columns: repeat(10, 1fr);}.d-grid-sm-11{display: grid; grid-template-columns: repeat(11, 1fr);}.d-grid-sm-12{display: grid; grid-template-columns: repeat(12, 1fr);}
+}
+@media (min-width: 768px) { 
+    .d-grid-md-1{display: grid; grid-template-columns: repeat(1, 1fr);}.d-grid-md-2{display: grid; grid-template-columns: repeat(2, 1fr);}.d-grid-md-3{display: grid; grid-template-columns: repeat(3, 1fr);}.d-grid-md-4{display: grid; grid-template-columns: repeat(4, 1fr);}.d-grid-md-5{display: grid; grid-template-columns: repeat(5, 1fr);}.d-grid-md-6{display: grid; grid-template-columns: repeat(6, 1fr);}.d-grid-md-7{display: grid; grid-template-columns: repeat(7, 1fr);}.d-grid-md-8{display: grid; grid-template-columns: repeat(8, 1fr);}.d-grid-md-9{display: grid; grid-template-columns: repeat(9, 1fr);}.d-grid-md-10{display: grid; grid-template-columns: repeat(10, 1fr);}.d-grid-md-11{display: grid; grid-template-columns: repeat(11, 1fr);}.d-grid-md-12{display: grid; grid-template-columns: repeat(12, 1fr);}
+}
+@media (min-width: 992px) { 
+    .d-grid-lg-1{display: grid; grid-template-columns: repeat(1, 1fr);}.d-grid-lg-2{display: grid; grid-template-columns: repeat(2, 1fr);}.d-grid-lg-3{display: grid; grid-template-columns: repeat(3, 1fr);}.d-grid-lg-4{display: grid; grid-template-columns: repeat(4, 1fr);}.d-grid-lg-5{display: grid; grid-template-columns: repeat(5, 1fr);}.d-grid-lg-6{display: grid; grid-template-columns: repeat(6, 1fr);}.d-grid-lg-7{display: grid; grid-template-columns: repeat(7, 1fr);}.d-grid-lg-8{display: grid; grid-template-columns: repeat(8, 1fr);}.d-grid-lg-9{display: grid; grid-template-columns: repeat(9, 1fr);}.d-grid-lg-10{display: grid; grid-template-columns: repeat(10, 1fr);}.d-grid-lg-11{display: grid; grid-template-columns: repeat(11, 1fr);}.d-grid-lg-12{display: grid; grid-template-columns: repeat(12, 1fr);}
+}
+@media (min-width: 1200px) { 
+    .d-grid-xl-1{display: grid; grid-template-columns: repeat(1, 1fr);}.d-grid-xl-2{display: grid; grid-template-columns: repeat(2, 1fr);}.d-grid-xl-3{display: grid; grid-template-columns: repeat(3, 1fr);}.d-grid-xl-4{display: grid; grid-template-columns: repeat(4, 1fr);}.d-grid-xl-5{display: grid; grid-template-columns: repeat(5, 1fr);}.d-grid-xl-6{display: grid; grid-template-columns: repeat(6, 1fr);}.d-grid-xl-7{display: grid; grid-template-columns: repeat(7, 1fr);}.d-grid-xl-8{display: grid; grid-template-columns: repeat(8, 1fr);}.d-grid-xl-9{display: grid; grid-template-columns: repeat(9, 1fr);}.d-grid-xl-10{display: grid; grid-template-columns: repeat(10, 1fr);}.d-grid-xl-11{display: grid; grid-template-columns: repeat(11, 1fr);}.d-grid-xl-12{display: grid; grid-template-columns: repeat(12, 1fr);}
+}
+
+@media (min-width: 576px) {
+    .position-sm-static {
+      position: static !important;
+    }
+    .position-sm-relative {
+      position: relative !important;
+    }
+    .position-sm-absolute {
+      position: absolute !important;
+    }
+    .position-sm-fixed {
+      position: fixed !important;
+    }
+    .position-sm-sticky {
+      position: sticky !important;
+    }
+}
+@media (min-width: 768px) {
+    .position-md-static {
+      position: static !important;
+    }
+    .position-md-relative {
+      position: relative !important;
+    }
+    .position-md-absolute {
+      position: absolute !important;
+    }
+    .position-md-fixed {
+      position: fixed !important;
+    }
+    .position-md-sticky {
+      position: sticky !important;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .position-lg-static {
+      position: static !important;
+    }
+    .position-lg-relative {
+      position: relative !important;
+    }
+    .position-lg-absolute {
+      position: absolute !important;
+    }
+    .position-lg-fixed {
+      position: fixed !important;
+    }
+    .position-lg-sticky {
+      position: sticky !important;
+    }
+    .fw-lg-normal {
+        font-weight: normal !important;
+    }
+    .fs-lg-0{
+        font-size : 16px !important;
+    }
+    .border-lg-top-0 {    border-top: 0 !important; }
+    .border-lg-right-0 {  border-right: 0 !important; }
+    .border-lg-bottom-0 { border-bottom: 0 !important; }
+    .border-lg-left-0 {   border-left: 0 !important; }
+    .bg-lg-none {background-color: transparent !important;}
+}
+  
+@media (min-width: 1200px) {
+    .position-xl-static {
+      position: static !important;
+    }
+    .position-xl-relative {
+      position: relative !important;
+    }
+    .position-xl-absolute {
+      position: absolute !important;
+    }
+    .position-xl-fixed {
+      position: fixed !important;
+    }
+    .position-xl-sticky {
+      position: sticky !important;
+    }
+}
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+    .border#{$infix}-top {      border-top: $border-width solid $border-color !important; }
+    .border#{$infix}-right {    border-right: $border-width solid $border-color !important; }
+    .border#{$infix}-bottom {   border-bottom: $border-width solid $border-color !important; }
+    .border#{$infix}-left {     border-left: $border-width solid $border-color !important; }
+
+    .border#{$infix}-top-0 {    border-top: 0 !important; }
+    .border#{$infix}-right-0 {  border-right: 0 !important; }
+    .border#{$infix}-bottom-0 { border-bottom: 0 !important; }
+    .border#{$infix}-left-0 {   border-left: 0 !important; }
+
+    .border#{$infix}-x {
+      border-left: $border-width solid $border-color !important;
+      border-right: $border-width solid $border-color !important;
+    }
+
+    .border#{$infix}-y {
+      border-top: $border-width solid $border-color !important;
+      border-bottom: $border-width solid $border-color !important;
+    }
+    // support of .border-sm (-md, -lg, -xl)
+    .border#{$infix} {
+      border-top: $border-width solid $border-color !important;
+      border-bottom: $border-width solid $border-color !important;
+      border-left: $border-width solid $border-color !important;
+      border-right: $border-width solid $border-color !important;
+    }
+    .border#{$infix}-0 {
+      border-top: 0 !important;
+      border-bottom: 0 !important;
+      border-left: 0 !important;
+      border-right: 0 !important;
+    }
+  }
+}
