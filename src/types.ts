@@ -1,54 +1,62 @@
 
 // 사용자 콜렉션 (users)
-export interface User {
+export interface Users {
     userId: string;
     email: string;
-    passwordHash: string;
     name: string;
+    nickname :string;
+    gender: string;
     profilePicture: string;
     role: string;
     createdAt: Date;
     lastLoginAt: Date;
     userPreferences?: any; // 추후 구체적인 타입으로 정의할 수 있습니다.
-    mfaEnabled: boolean;
-  }
+    certNaver: boolean;
+    certKakao : boolean;
+    storeId: string;
+    storeName: string;
+    favPartners: string[];
+    linkStores: string[];
+}
   
   // 매장 콜렉션 (stores)
-  export interface Store {
-    storeId: string;
-    ownerId: string;
-    name: string;
-    description: string;
-    location: {
-      lat: number;
-      lng: number;
-    };
-    address: string;
-    contactInfo: string;
-    images: string[];
-    createdAt: Date;
-    reviews?: string[]; // 리뷰 ID 배열
-  }
-  
-  // 회원사 콜렉션 (memberCompanies)
-  export interface MemberCompany {
+export interface Stores {
+    address: string,
+    address1 : string,
+    address2 : string,
+    address3 : string,
+    address4 : string,
+    category1 : string,
+    category2 : string,
+    category3 : string,
+    certDate : string,
+    num : string,
+    id: string,
+    storeName : string,
+    tel : string,
+    x : string,
+    y : string
+}
+
+// 회원사 콜렉션 (memberCompanies)
+export interface MemberCompany {
     companyId: string;
     name: string;
     description: string;
     portfolio?: string[]; // 포트폴리오 ID 배열
     subscription: {
-      status: string;
-      startDate: Date;
-      endDate?: Date;
+    status: string;
+    startDate: Date;
+    endDate?: Date;
     };
     contactInfo: string;
     rating: number;
     createdAt: Date;
     reviews?: string[]; // 리뷰 ID 배열
-  }
-  
-  // 리뷰 콜렉션 (reviews)
-  export interface Review {
+}
+
+// 리뷰 콜렉션 (reviews)
+export interface ReviewStore {
     reviewId: string;
     userId: string;
     storeId?: string;
@@ -56,19 +64,18 @@ export interface User {
     rating: number;
     comment: string;
     createdAt: Date;
-  }
-  
-  // 즐겨찾기 콜렉션 (favorites)
-  export interface Favorite {
-    favoriteId: string;
+}
+export interface ReviewPartner {
+    reviewId: string;
     userId: string;
-    storeIds: string[];
-    companyIds: string[];
+    storeId?: string;
+    companyId?: string;
+    rating: number;
+    comment: string;
     createdAt: Date;
-  }
-  
-  // 게시글 콜렉션 (posts)
-  export interface Post {
+}
+// 게시글 콜렉션 (posts)
+export interface Posts {
     postId: string;
     userId: string;
     category: string;
@@ -77,10 +84,13 @@ export interface User {
     images?: string[];
     createdAt: Date;
     updatedAt: Date;
-  }
-  
-  // 마케팅 캠페인 콜렉션 (marketingCampaigns)
-  export interface MarketingCampaign {
+}
+export interface Comments {
+
+}
+
+// 마케팅 캠페인 콜렉션 (marketingCampaigns)
+export interface MarketingCampaigns {
     campaignId: string;
     name: string;
     type: string;
@@ -89,17 +99,19 @@ export interface User {
     startDate: Date;
     endDate: Date;
     metrics?: any; // 추후 구체적인 타입으로 정의할 수 있습니다.
-  }
-  
-  // 포트폴리오 콜렉션 (portfolios)
-  export interface Portfolio {
+}
+
+// 포트폴리오 콜렉션 (portfolios)
+export interface Portfolios {
     portfolioId: string;
-    companyId: string;
+    partnersId: string;
     title: string;
     description: string;
     images: string[];
     documents?: string[];
     createdAt: Date;
     updatedAt: Date;
-  }
-  
+    scrabCount: string;
+    reply : string[];
+}
+    

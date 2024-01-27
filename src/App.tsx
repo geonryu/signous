@@ -10,10 +10,10 @@ import AdminStores from './components/admin/adminStores';
 import Layout from './page/default';
 import Home from './page/home/home';
 import Login from './routes/login';
-import Join from './routes/join';
 import Partners from './routes/partners/partners';
 import PartnersHome from './routes/partners/partnersHome';
 import PtnJoin from './routes/partners/ptnJoin';
+import Signup from './routes/join';
 const GlobalStyles = createGlobalStyle`
    *, :after, :before, ::after, ::before {box-sizing:border-box}
    * {margin:0; padding: 0; background-repeat: no-repeat; background-size: cover; background-position: center center;}
@@ -47,8 +47,8 @@ const router = createBrowserRouter([
    element: <Login />
    },
    {
-      path: "/join",
-      element: <Join />
+      path: "/signup",
+      element: <Signup />
    },
   {
       path: "/admin",
