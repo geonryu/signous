@@ -3,10 +3,17 @@ import '../style/style.css'
 import { Wrapper } from './components/global/layout';
 import { createGlobalStyle } from 'styled-components';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import AdminHome from './components/page/admin/adminHome';
-import AdminMembers from './components/page/admin/adminMembers';
-import AdminPartners from './components/page/admin/adminPartners';
-import AdminStores from './components/page/admin/adminStores';
+import AdminHome from './page/admin/adminHome';
+import AdminMembers from './components/admin/adminMembers';
+import AdminPartners from './components/admin/adminPartners';
+import AdminStores from './components/admin/adminStores';
+import Layout from './page/default';
+import Home from './page/home/home';
+import Login from './routes/login';
+import Join from './routes/join';
+import Partners from './routes/partners/partners';
+import PartnersHome from './routes/partners/partnersHome';
+import PtnJoin from './routes/partners/ptnJoin';
 const GlobalStyles = createGlobalStyle`
    *, :after, :before, ::after, ::before {box-sizing:border-box}
    * {margin:0; padding: 0; background-repeat: no-repeat; background-size: cover; background-position: center center;}
@@ -14,8 +21,8 @@ const GlobalStyles = createGlobalStyle`
    body {-webkit-font-smoothing:antialiased; line-height:1.5}
    canvas, img, picture, svg, video {display:block;max-width:100%}
    button, input, select, textarea {font:inherit; border: 0; background-color: transparent;}
-   button{cursor: pointer;}
-   h1, h2, h3, h4, h5, h6, p {overflow-wrap:break-word}
+   button{cursor: pointer; display: block;}
+   h1, h2, h3, h4, h5, h6, p {overflow-wrap:break-word; margin: 0; padding: 0;}
    #__next, #root {isolation:isolate}
    ul,ol{list-style: none;}
    a{text-decoration: none; color: inherit;}
@@ -26,15 +33,23 @@ const GlobalStyles = createGlobalStyle`
 
 const router = createBrowserRouter([
    {
-      // path: "/",
-      // element: <Layout/>,
-      // children: [
-      //     {
-      //         path:"", 
-      //         element: <Home />
-      //     },
-      // ]
+      path: "/",
+      element: <Layout/>,
+      children: [
+          {
+              path:"", 
+              element: <Home />
+          },
+      ]
   },
+  {
+   path: "/login",
+   element: <Login />
+   },
+   {
+      path: "/join",
+      element: <Join />
+   },
   {
       path: "/admin",
       // element: <AdminProtect><AdminHome /></AdminProtect>,
@@ -53,7 +68,22 @@ const router = createBrowserRouter([
             element: <AdminStores />
          },
       ]
-  }
+   },
+   {
+      path: "/partners",
+      element: <Partners />,
+      children : [
+         {
+            path : "/partners",
+            element: <PartnersHome />
+         }
+      ]
+   },
+   {
+      path: "/partnersJoin",
+      element: <PtnJoin />
+   }
+   
 ]);
 
 function App() {

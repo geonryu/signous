@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
 `;
 
 export const Wrap = styled.div`
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
     max-width: 1320px;
     margin: 0 auto;
     @media (min-width: 576px) {padding: 0 1rem;}
@@ -18,5 +18,19 @@ export const Flex = styled.div`
 `;
 
 export const Section = styled.section`
-    padding: 3rem;
+    padding: 3rem 0;
+`;
+
+export const Ellipsis = styled.div`
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    word-wrap: break-word;
+    &.ellipsis-1{-webkit-line-clamp: 1;}
+    &.ellipsis-2{-webkit-line-clamp: 2;}
+    &.ellipsis-3{-webkit-line-clamp: 3;}
+    &.ellipsis-4{-webkit-line-clamp: 4;}
+    &.ellipsis-5{-webkit-line-clamp: 5;}
+    &.ellipsis-6{-webkit-line-clamp: 6;}
 `;

@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
-import { Wrapper } from "../../global/layout";
-import AdminNav from "./adminNav";
+import { Wrapper } from "../../components/global/layout";
+import AdminNav from "../../components/admin/adminNav";
 
 
 export default function AdminHome() {

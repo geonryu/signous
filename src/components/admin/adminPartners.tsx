@@ -1,4 +1,4 @@
-import { Wrap } from "../../global/layout";
+import { Wrap } from "../global/layout";
 
 export default function AdminPartners() {
     return (
