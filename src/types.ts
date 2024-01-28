@@ -13,8 +13,6 @@ export interface Users {
     userPreferences?: any; // 추후 구체적인 타입으로 정의할 수 있습니다.
     certNaver: boolean;
     certKakao : boolean;
-    storeId: string;
-    storeName: string;
     favPartners: string[];
     linkStores: string[];
 }

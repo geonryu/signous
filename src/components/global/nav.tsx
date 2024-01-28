@@ -31,7 +31,7 @@ export default function Navigation(props :any) {
     return(
         <Nav className={`${props.navState ? "opn" : ""}`}>
             <Wrap className="d-flex flex-column h-100">
-                <BtnClose><button onClick={handleClose}><span className="material-symbols-outlined">close</span></button></BtnClose>
+                <BtnClose><button onClick={handleClose}><span className="material-symbols-rounded">close</span></button></BtnClose>
                 <UserControl></UserControl>
                 <GNB></GNB>
             </Wrap>

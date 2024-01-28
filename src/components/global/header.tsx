@@ -26,7 +26,7 @@ export default function GlobalHeader() {
                 <h1><a href="/"><img className="h-100" src="https://firebasestorage.googleapis.com/v0/b/signous-bc70c.appspot.com/o/resources%2Flogo.svg?alt=media&token=5b8d2bac-50b2-4f41-99f6-34d4afca8afe" alt="사이너스" /></a></h1>
                 <Navigation navState={navCtrl} setNavState={setNavCtrl}></Navigation>
                 <BtnNavOpn>
-                    <button onClick={handleNav} type="button" className="text-gray-700"><span className="fs-5 material-symbols-outlined d-block">menu</span></button>
+                    <button onClick={handleNav} type="button" className="text-gray-700"><span className="fs-3 fw-bold material-symbols-rounded d-block">menu</span></button>
                 </BtnNavOpn>
             </Wrap>
         </Header>
