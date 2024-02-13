@@ -9,6 +9,7 @@ import { useRef, useState } from "react";
 import InputComps from "../global/form-components/inputComps";
 import CheckboxComps from "../global/form-components/checkBox";
 import { BtnWide } from "../global/buttons";
+import Loading from "../global/loading";
 
 const Form = styled.form`
     & .scrBar .swiper-pagination-progressbar-fill{background-color: #ff4600; border-radius: 500px; display: block; position: unset;}
@@ -39,18 +40,20 @@ export default function SignupForm() {
     const signUpSteps = 4;
     const [step, setStep] = useState(1);
     const [step1, setStep1] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
     // const [step1, setStep1] = useState(false);
     // const [step1, setStep1] = useState(false);
-
+    
     const goToSlide = () => {
         if (swiperRef.current) {
-          swiperRef.current.slideNext();
+            swiperRef.current.slideNext();
         }
     };
     
     
     return (
         <Section>
+            {isLoading ? <Loading/> : null}
             <Wrap className="mx-auto col-md-8 col-lg-6">
                 <h3 className="mb-4 fw-bold text-center"><span className="fs-6 d-block text-primary">SIGNOUS</span> 회원가입</h3>
                 <Form action="">
@@ -72,6 +75,7 @@ export default function SignupForm() {
                         navigation = {{prevEl: ".prevProgress", nextEl: ""}}
                         onActiveIndexChange={(e)=>{
                             setStep(e.realIndex + 1);
+
                         }}
                         spaceBetween={16}
                         // allowTouchMove = {false}

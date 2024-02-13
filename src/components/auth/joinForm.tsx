@@ -136,6 +136,7 @@ export default function JoinForm() {
             await updateProfile(credentials.user,{
                 displayName: name,
             }); 
+            setLoading(false)
         } catch(e) {
             if(e instanceof FirebaseError) {
                 console.error(e.message);
@@ -194,6 +195,7 @@ export default function JoinForm() {
 
     return (
         <Section className="py-5">
+            
             <div className="container">
                 <div className="wrapper col-12 col-lg-6 col-xl-4 mx-lg-auto">
                     <h2 className="border-bottom text-center pb-3 mb-3 fw-bold">회원가입</h2>

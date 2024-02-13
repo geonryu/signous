@@ -13,10 +13,6 @@ const BtnNavOpn = styled.div`
 export default function GlobalHeader() {
     const [navCtrl, setNavCtrl] = useState(false);
 
-    useEffect(() => {
-        console.log(navCtrl);
-    }, [navCtrl]);
-
     const handleNav = () => {
         setNavCtrl(!navCtrl);
     }

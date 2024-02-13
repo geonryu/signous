@@ -1,9 +1,10 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components"
 import { auth } from "../../firebase";
 import { FirebaseError } from "firebase/app";
+import Loading from "../global/loading";
 
 const Section = styled.section``;
 
@@ -13,6 +14,17 @@ export default function LoginForm() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            if (user) {
+                navigate("/");
+            }
+        });
+      
+        return () => unsubscribe();
+    }, []);
+      
     const onChange = (e : React.ChangeEvent<HTMLInputElement>) => {
         const {
             target: {name, value}
@@ -49,14 +61,15 @@ export default function LoginForm() {
 
     return (
         <Section className="py-5">
+            {isLoading ? <Loading/> : null}
             <div className="container">
                 <div className="wrapper col-12 col-lg-6 col-xl-4 mx-lg-auto">
                     <h2 className="border-bottom text-center pb-3 mb-3 fw-bold">로그인</h2>
                     <div className="email-login mb-3">
                         <form action="" id="loginForm" onSubmit={onSubmit}>
-                            <div className="user-id mb-3"><input onChange={onChange} className="px-2 py-2 bg-white border border-primary d-block rounded w-100 border d-block w-100" id="email" name="email" type="email" placeholder={"아이디(이메일)을 입력하세요."} /></div>
-                            <div className="user-pw mb-3"><input onChange={onChange} className="px-2 py-2 bg-white border border-primary d-block rounded w-100 border d-block w-100" id="password" name="password" type="password" placeholder={"비밀번호를 입력하세요."} /></div>
-                            <div className="btn-submit"><button className="px-2 py-2 d-block w-100 bg-black text-white rounded fw-bold" id="loginSubmit" type="submit">{isLoading ? "처리중" : "로그인"}</button></div>
+                            <div className="user-id mb-3"><input onChange={onChange} className="px-2 py-2 bg-white border d-block rounded w-100 border d-block w-100" id="email" name="email" type="email" placeholder={"아이디(이메일)을 입력하세요."} /></div>
+                            <div className="user-pw mb-3"><input onChange={onChange} className="px-2 py-2 bg-white border d-block rounded w-100 border d-block w-100" id="password" name="password" type="password" placeholder={"비밀번호를 입력하세요."} /></div>
+                            <div className="btn-submit"><button className="px-2 py-2 d-block w-100 bg-black text-white rounded fw-bold" id="loginSubmit" type="submit">로그인</button></div>
                             {error !== "" ? <span className="px-1 mt-2 fs-6 text-point d-block">아이디 또는 비밀번호를 확인해주세요.</span> : null}
                         </form>
                     </div>

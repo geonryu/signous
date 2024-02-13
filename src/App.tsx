@@ -14,6 +14,10 @@ import Partners from './routes/partners/partners';
 import PartnersHome from './routes/partners/partnersHome';
 import PtnJoin from './routes/partners/ptnJoin';
 import Signup from './routes/join';
+import ProtectedRoute from './routes/protectRoute';
+import Mypage from './routes/mypage/mypage';
+import Mypagehome from './page/users/mypagehome';
+import Nearby from './page/nearby/nearby';
 const GlobalStyles = createGlobalStyle`
    *, :after, :before, ::after, ::before {box-sizing:border-box}
    * {margin:0; padding: 0; background-repeat: no-repeat; background-size: cover; background-position: center center;}
@@ -36,10 +40,14 @@ const router = createBrowserRouter([
       path: "/",
       element: <Layout/>,
       children: [
-          {
-              path:"", 
-              element: <Home />
-          },
+         {
+            path: "/", 
+            element: <Home />
+         },
+         {
+            path: "/nearby",
+            element: <Nearby/>
+         }
       ]
   },
   {
@@ -82,12 +90,23 @@ const router = createBrowserRouter([
    {
       path: "/partnersJoin",
       element: <PtnJoin />
+   },
+   {
+      path: "/mypage",
+      element: <ProtectedRoute><Mypage /></ProtectedRoute>,
+      children : [
+         {
+            path : "/mypage",
+            // element: <ProtectedRoute><Mypagehome /></ProtectedRoute>,
+            element : <Mypagehome />
+         }
+
+      ]
    }
    
 ]);
 
 function App() {
-
    return (
       <Wrapper>
           <GlobalStyles />
