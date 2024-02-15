@@ -51,7 +51,6 @@ export default function StoreLists() {
         };
 
         getStores();
-        console.log(stores);
     }, []);
     return (
         <Section>
@@ -60,7 +59,7 @@ export default function StoreLists() {
                     stores.length ? (
                         stores.map((list, i) => {
                             return (
-                                <div className="d-grid-3 gap-2">
+                                <div className="d-grid-3 gap-2" key={list.id+i}>
                                     <div className="rounded overflow-hidden">
                                         <img className="w-100" src="https://firebasestorage.googleapis.com/v0/b/signous-bc70c.appspot.com/o/resources%2Fskeleton-thumb.jpg?alt=media&token=8ce11deb-e969-48b7-8f86-09f13b23f8ee" alt="" />
                                     </div>

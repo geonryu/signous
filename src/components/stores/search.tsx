@@ -8,11 +8,7 @@ export default function SearchBox() {
             <div className="">
                 <span className="d-block material-symbols-outlined fs-5 text-gray-600">search</span>
             </div>
-            <div className="fs-6">
-                <span>동해물과</span>&nbsp;
-                <span>백두산이</span>&nbsp;
-                <span>마르고</span>
-            </div>
+            <div className="fs-6">지역별, 카테고리별 검색</div>
         </Search>
     )
 }
