@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { auth } from "../../firebase";
 import styled from "styled-components";
-import { BtnWide } from "../global/buttons";
+import { BtnWide } from "../global/buttons/buttons";
 import { Section } from "../global/layout";
 import { useNavigate } from "react-router-dom";
 import Loading from "../global/loading";

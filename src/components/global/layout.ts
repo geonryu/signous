@@ -18,7 +18,7 @@ export const Flex = styled.div`
 `;
 
 export const Section = styled.section`
-    padding: 3rem 0;
+    padding: 2rem 0;
 `;
 
 export const Ellipsis = styled.div`

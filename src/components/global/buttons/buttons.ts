@@ -5,6 +5,7 @@ export const BtnDefault = styled.button`
     padding: 0.5rem 1rem;
     font-size: 14px;
     border-radius: 0.5rem;
+    width: max-content;
 
     &.primary{background-color: #ff4600; color: #fff;}
     &.black{background-color: #000; color: #fff;}
@@ -22,6 +23,7 @@ export const BtnRedirectionDefault = styled.a`
     font-size: 14px;
     border-radius: 0.5rem;
     text-align: center;
+    width: max-content;
 
     &.primary{background-color: #ff4600; color: #fff;}
     &.black{background-color: #000; color: #fff;}

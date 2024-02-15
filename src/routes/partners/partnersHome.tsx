@@ -1,4 +1,4 @@
-import { BtnRedirectionDefault } from "../../components/global/buttons";
+import { BtnRedirectionDefault } from "../../components/global/buttons/buttons";
 import {  Wrap } from "../../components/global/layout";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from "swiper/modules";

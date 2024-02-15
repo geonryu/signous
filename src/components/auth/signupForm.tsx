@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import { useRef, useState } from "react";
 import InputComps from "../global/form-components/inputComps";
 import CheckboxComps from "../global/form-components/checkBox";
-import { BtnWide } from "../global/buttons";
+import { BtnWide } from "../global/buttons/buttons";
 import Loading from "../global/loading";
 
 const Form = styled.form`

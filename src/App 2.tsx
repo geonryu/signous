@@ -7,16 +7,13 @@ import AdminHome from './page/admin/adminHome';
 import AdminMembers from './components/admin/adminMembers';
 import AdminPartners from './components/admin/adminPartners';
 import AdminStores from './components/admin/adminStores';
+import Layout from './routes/default';
 import Home from './page/home/home';
 import Login from './routes/login';
-import Signup from './routes/join';
-import Partners from './routes/partners/partners';
+import Partners from './routes/partners';
 import PartnersHome from './routes/partners/partnersHome';
 import PtnJoin from './routes/partners/ptnJoin';
-import Layout from './page/default';
-import Mypage from './routes/mypage/mypage';
-import Mypagehome from './page/users/mypagehome';
-import Stores from './page/stores/stores';
+import Signup from './routes/join';
 const GlobalStyles = createGlobalStyle`
    *, :after, :before, ::after, ::before {box-sizing:border-box}
    * {margin:0; padding: 0; background-repeat: no-repeat; background-size: cover; background-position: center center;}
@@ -39,14 +36,10 @@ const router = createBrowserRouter([
       path: "/",
       element: <Layout/>,
       children: [
-         {
-            path:"", 
-            element: <Home />
-         },
-         {
-            path: "/stores",
-            element: <Stores />
-         }
+          {
+              path:"", 
+              element: <Home />
+          },
       ]
   },
   {
@@ -89,16 +82,6 @@ const router = createBrowserRouter([
    {
       path: "/partnersJoin",
       element: <PtnJoin />
-   },
-   {
-      path: "/mypage",
-      element: <Mypage />,
-      children : [
-         {
-            path: "/mypage",
-            element: <Mypagehome />
-         }
-      ]
    }
    
 ]);

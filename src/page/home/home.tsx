@@ -1,4 +1,3 @@
-import { Wrap } from "../../components/global/layout";
 import MainReview from "../../components/home/mainReview";
 import MainVisual from "../../components/home/mainVisual";
 

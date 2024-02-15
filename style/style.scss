@@ -18,7 +18,7 @@ $theme-colors: (
     "primary-white" : #ffffff,
     "blue-light" : #eff4fe,
     "blue-dark" : #072a60,
-    "gray-100": #f8f9fa,
+    "gray-100": #f0f1f2,
     "gray-200": #e9ecef,
     "gray-300": #dee2e6,
     "gray-400": #ced4da,
@@ -86,6 +86,9 @@ img{vertical-align: top;}
 .colspan-4-5{grid-column: 4 / 5}
 .colspan-4-6{grid-column: 4 / 6}
 .colspan-5-6{grid-column: 5 / 6}
+
+.fs-7{font-size: 0.75rem;}
+.fs-8{font-size: 0.625rem;}
 @media (min-width: 576px) { 
     .d-grid-sm-1{display: grid; grid-template-columns: repeat(1, 1fr);}.d-grid-sm-2{display: grid; grid-template-columns: repeat(2, 1fr);}.d-grid-sm-3{display: grid; grid-template-columns: repeat(3, 1fr);}.d-grid-sm-4{display: grid; grid-template-columns: repeat(4, 1fr);}.d-grid-sm-5{display: grid; grid-template-columns: repeat(5, 1fr);}.d-grid-sm-6{display: grid; grid-template-columns: repeat(6, 1fr);}.d-grid-sm-7{display: grid; grid-template-columns: repeat(7, 1fr);}.d-grid-sm-8{display: grid; grid-template-columns: repeat(8, 1fr);}.d-grid-sm-9{display: grid; grid-template-columns: repeat(9, 1fr);}.d-grid-sm-10{display: grid; grid-template-columns: repeat(10, 1fr);}.d-grid-sm-11{display: grid; grid-template-columns: repeat(11, 1fr);}.d-grid-sm-12{display: grid; grid-template-columns: repeat(12, 1fr);}
 }

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Wrap } from "./layout";
 
-const Flogo = styled.div`width: 92px`;
+const Flogo = styled.div`width: 92px;`;
 
 export default function GlobalFooter() {
     return(

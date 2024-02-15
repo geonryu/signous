@@ -2,7 +2,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import styled from "styled-components";
 import { Ellipsis, Section, Wrap } from "../global/layout";
-import { BtnRedirectionWide } from '../global/buttons';
+import { BtnRedirectionWide } from '../global/buttons/buttons';
 
 const Thumb = styled.div``;
 
