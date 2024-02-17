@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Wrap } from "./layout";
 import Navigation from "./nav";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Header = styled.header`
     height: 70px;

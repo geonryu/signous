@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Section, Wrap } from "../global/layout";
 import Star from "../global/ratings/star";
-import StarRating from "../global/ratings/starRating";
 import Heart from "../global/ratings/heart";
 import { useEffect, useState } from "react";
 import { fetchData } from "../../modules/firestore_modules/fbFetchStores";
@@ -41,17 +40,17 @@ interface Store {
     category3? : string;
 }
 
-export default function StoreLists() {
+export default function StoreLists(props: any) {
     const [stores, setStores] = useState<Store[]>([]);;
 
     useEffect(() => {
         const getStores = async () => {
-            const data = await fetchData();
+            const data = await fetchData(props.data.add1);
             setStores(data);
         };
 
         getStores();
-    }, []);
+    }, [props.data]);
     return (
         <Section>
             <Wrap className="d-flex flex-column gap-3">

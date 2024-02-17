@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Section, Wrap } from "../global/layout";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore from 'swiper';
 import { Navigation } from "swiper/modules";
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -36,7 +35,7 @@ const formComponents = {
 
 
 export default function SignupForm() {
-    const swiperRef = useRef<SwiperCore | null>(null);
+    const swiperRef = useRef<any>(null);
     const signUpSteps = 4;
     const [step, setStep] = useState(1);
     const [step1, setStep1] = useState(false);
@@ -47,6 +46,7 @@ export default function SignupForm() {
     const goToSlide = () => {
         if (swiperRef.current) {
             swiperRef.current.slideNext();
+            console.log(setIsLoading);
         }
     };
     
@@ -86,7 +86,6 @@ export default function SignupForm() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <InputComps attr={formComponents.email}></InputComps>
-                            gggg
                         </SwiperSlide>
                         <SwiperSlide>Slide 3</SwiperSlide>
                         <SwiperSlide>Slide 4</SwiperSlide>

@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Wrap } from "../global/layout";
 import BasicSwitch from "../global/buttons/basicSwitch";
 
 const Actions = styled.div``;

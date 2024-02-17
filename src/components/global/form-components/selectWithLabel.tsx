@@ -64,13 +64,13 @@ export default function SelectWithLabel() {
 
   const handleFocus = () => setIsFocus(true);
   const handleBlur = () => setIsFocus(false);
-  const handleSelectOption = (option) => {
+  const handleSelectOption = (option: any) => {
     setSelectedOption(option);
     setIsFocus(false); // 옵션 선택 후 포커스 해제
   };
 
   return (
-    <SelectBox isFocus={isFocus} tabIndex="0" onFocus={handleFocus} onBlur={handleBlur}>
+    <SelectBox isFocus={isFocus} tabIndex={0} onFocus={handleFocus} onBlur={handleBlur}>
         <Label isFocus={isFocus || selectedOption !== ""}>지역선택</Label>
         <Options className={isFocus ? "show" : ""}>
             <Option onClick={() => handleSelectOption("옵션 1")}>옵션 1</Option>

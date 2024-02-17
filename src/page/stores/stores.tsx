@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Wrap } from "../../components/global/layout";
 import Filter from "../../components/stores/filters";
 import MoreAction from "../../components/stores/moreAction";
@@ -11,10 +11,13 @@ export default function Stores() {
     const [selectedFilters, setSelectedFilters] = useState({
         region: "전체",
     });
+    const [fetchDatas, setFetchDatas] = useState({
+        add1 : "서울"
+    });
 
-    useEffect(() => {
-        console.log(selectedFilters);
-    }, [selectedFilters])
+    // useEffect(() => {
+    //     console.log(selectedFilters);
+    // }, [fetchDatas])
 
     const handlePop = () => {
         setFilterPop(!filterPop);
@@ -25,7 +28,8 @@ export default function Stores() {
     };
 
     const handleSaveChanges = (region: string) => {
-        console.log("Filters saved:", region);
+        // console.log("Filters saved:", region);
+        setFetchDatas({add1: region});
         setSelectedFilters({ ...selectedFilters, region });
     };
 
@@ -44,14 +48,14 @@ export default function Stores() {
                     <div onClick={handlePop} className="w-100"><SearchBox></SearchBox></div>
                     <Filter></Filter>
                 </Wrap>
-                <Wrap className="pb-2 text-gray-800 fs-6">'서울시 중구'의 검색 결과</Wrap>
+                <Wrap className="pb-2 text-gray-800 fs-6">'{selectedFilters.region === "전체" ? "서울 중구" : selectedFilters.region}'의 검색 결과</Wrap>
                 <div className="py-2 bg-bg200 shadow-sm">
                     <Wrap>
                         <MoreAction></MoreAction>
                     </Wrap>
                 </div>
             </div>
-            <StoreLists></StoreLists>
+            <StoreLists data={fetchDatas}></StoreLists>
         </div>
     )
 }

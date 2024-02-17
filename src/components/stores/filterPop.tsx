@@ -52,10 +52,10 @@ const Region = styled.div<{ $isSelected: boolean }>`
         color: #fff;
     `}
 `;
-const District = styled.div`
-    border: 1px solid #f0f0f0;
-    width: max-content;
-`;
+// const District = styled.div`
+//     border: 1px solid #f0f0f0;
+//     width: max-content;
+// `;
 
 const FilterPop: React.FC<FilterPopProps> = ({ initialState, onClose, onSave, selectedRegion }) => {
     const [$state, set$State] = useState(initialState);
@@ -65,6 +65,7 @@ const FilterPop: React.FC<FilterPopProps> = ({ initialState, onClose, onSave, se
     useEffect(() => {
         const timeoutId = setTimeout(() => set$State(true), 10);
         return () => clearTimeout(timeoutId);
+        console.log(districts)
     }, [initialState]);
 
     useEffect(() => {
@@ -133,7 +134,7 @@ const FilterPop: React.FC<FilterPopProps> = ({ initialState, onClose, onSave, se
                             }
                         </div>
                     </div>
-                    {
+                    {/* {
                         selectedRegion !== "전체" && tempSelectedRegion !== "전체" ? (
                             <div className='border-top py-2'>
                                 <div className='d-flex align-items-center py-2 fw-bold'>상세 지역을 선택해주세요.</div>
@@ -152,7 +153,7 @@ const FilterPop: React.FC<FilterPopProps> = ({ initialState, onClose, onSave, se
                                 </div>
                             </div>
                         ) : null
-                    }
+                    } */}
                 </PopBody>
             </Wrap>
             <PopSubmit className='bg-white shadow border-top pt-3 pb-4'>

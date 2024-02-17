@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Wrap } from "../global/layout";
-import { BtnRedirectionDefault } from "../global/buttons/buttons";
 
 const Slide = styled.div`
     /* height: 240px; */
